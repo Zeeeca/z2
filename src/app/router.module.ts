@@ -4,9 +4,10 @@ import { CategoryComponent } from './product/category/category.component';
 import { NgModule } from '@angular/core';
 import { BlogComponent } from './blog/blog.component';
 import { RegistrationComponent } from './authentication/registration.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const appRoutes: Routes = [
-    { path: '', pathMatch: 'full', redirectTo: 'products' },
+    { path: '', pathMatch: 'full', component: LandingPageComponent },
     { path: 'products', component: ProductComponent },
     { path: 'category/:categoryName', component: CategoryComponent },
     { path: 'blog', component: BlogComponent },

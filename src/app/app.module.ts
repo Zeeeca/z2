@@ -19,6 +19,7 @@ import { AuthenticationService } from './authentication/authentication.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegistrationComponent } from './authentication/registration.component';
 import { SetFocusDirective } from './custom-directives/set-focus.directive';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { SetFocusDirective } from './custom-directives/set-focus.directive';
     BlogComponent,
     BlogArticle,
     RegistrationComponent,
+    LandingPageComponent,
     DropDownDirective,
     SetFocusDirective
   ],
