@@ -1,0 +1,21 @@
+.blog-wrapper {
+  height: 800px;
+  overflow: auto;
+}
+
+.blog-wrapper .blog-item {
+  width: 50%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.blog-wrapper .blog-item h3 {
+  text-transform: capitalize;
+}
+
+.blog-wrapper .blog-item p::first-letter {
+  text-transform: capitalize;
+}
+ 
+
+ /*# sourceMappingURL= blog-article.component.css.map */

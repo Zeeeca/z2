@@ -1,0 +1,14 @@
+.products-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    app-product-item {
+        flex-basis: 25%;
+        flex-grow: 1;
+        min-width: 320px;
+        max-width: 640px;
+        
+    border: 3px solid transparent;
+    }
+}

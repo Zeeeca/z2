@@ -1,0 +1,29 @@
+<div class="shopping-cart-wrapper">
+  <div class="shopping-cart-title" (click)="onDropdownClicked()">
+    <span>Shopping Cart</span>
+    <span *ngIf="totalAmount" class="total-price">${{ totalAmount | number:'1.1-2' }}</span>
+    <span class="arrow-down">
+      <img src="https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-down-01-512.png" alt="Open" [class.flipped]="showDropdown">
+    </span>
+  </div>
+  <div class="cart-items-wrapper">
+    <div class="shopping-cart-item" *ngIf="cartItems.length == 0" [class.hide]="!showDropdown">
+      <span>Nothing in cart, why not buy something...</span>
+    </div>
+    <div class="shopping-cart-item" [class.hide]="!showDropdown" *ngFor="let item of cartItems; let i = index">
+      <img [src]="item.product.image" alt="item.product.name">
+      <span class="product-name">{{ item.product.name }}</span>
+      <span class="quantity">
+        <small>Count: </small>
+        <strong>{{ item.quantity }}</strong>
+        <small>Price: </small>
+        <strong>${{ item.product.price.amount }}</strong>
+      </span>
+      <div class="shopping-cart-item-controls">
+        <button type="button" class="remove" data-index="i" (click)="removeFromCart(i)">x</button>
+        <button type="button" class="substract" data-index="i" (click)="decrementQuantity(i)">-</button>
+        <button type="button" class="add" data-index="i" (click)="incrementQuantity(i)">+</button>
+      </div>
+    </div>
+  </div>
+</div>

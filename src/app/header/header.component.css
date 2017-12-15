@@ -1,0 +1,88 @@
+.header {
+  position: relative;
+  height: 180px;
+  width: 100%;
+  background-color: #222;
+}
+
+app-shopping-cart {
+  position: absolute;
+  right: 25px;
+  bottom: 0px;
+  border-top: 3px solid white;
+  border-left: 30px solid white;
+  border-top-left-radius: 90px;
+  border-right: 30px solid white;
+  border-top-right-radius: 90px;
+}
+
+.main-logo {
+  width: 200px;
+}
+
+.main-logo img {
+  width: 100%;
+}
+
+.auth {
+  position: absolute;
+  top: 8px;
+  right: 13px;
+  color: white;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navigation {
+  background-color: yellow;
+  position: absolute;
+  bottom: 0px;
+  width: 45%;
+  padding-right: 15px;
+  border-right: 15px solid green;
+  border-top-right-radius: 35px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 40px;
+  text-align: center;
+}
+
+.navigation .nav-items {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+.navigation .nav-items .nav-item {
+  flex-grow: 1;
+}
+
+.navigation .nav-items .nav-item:hover {
+  background-color: green;
+}
+
+.navigation .nav-items .nav-item .dropdown-menux {
+  display: none;
+}
+
+.navigation .nav-items .nav-item.show .dropdown-menux {
+  position: absolute;
+  top: 40px;
+  background-color: yellow;
+  width: 30%;
+  display: block;
+}
+
+@media (max-width: 795px) {
+  .navigation {
+    bottom: 40px;
+    width: 80%;
+  }
+}
+ 
+
+ /*# sourceMappingURL= header.component.css.map */

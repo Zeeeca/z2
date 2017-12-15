@@ -1,0 +1,14 @@
+<div class="product-wrapper">
+    <div class="img-wrapper">
+        <img [src]="product.image" [alt]="product.name">
+    </div>  
+    <p>
+        <span class="product-name">{{ product.name }}</span>
+    </p>
+    <p>
+            <span class="product-price">${{ product.price.amount }} /</span>
+            <span class="product-price">${{ product.price.amount - 2 }} /</span>
+            <span class="product-price">${{ product.price.amount - 4 }}</span>
+            <button class="add-to-cart" type="button" (click)="onAddToOrder()">Add to order</button>
+    </p>
+  </div>

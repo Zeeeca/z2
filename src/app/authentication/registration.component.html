@@ -1,0 +1,32 @@
+<div class="registration-form-wrapper">
+    <form [formGroup]="userForm">
+        <div class="form-group">
+            <input type="hidden" formControlName="id">
+            <input type="text" placeholder="Name" formControlName="name"> 
+            <input type="text" placeholder="Username" formControlName="username">
+            <input type="text" placeholder="Email" formControlName="email">
+            <div class="form-group" formArrayName="address" *ngFor="let formGroup of userForm.get('address').controls; let i = index; let last = last" >
+                <div class="form-group" [formGroupName]="i"> 
+                    <input type="text" placeholder="Street" formControlName="street" appFocus>
+                    <input type="text" placeholder="Suite" formControlName="suite">
+                    <input type="text" placeholder="City" formControlName="city">
+                    <input type="text" placeholder="Zipcode" formControlName="zipcode">
+                    <div class="form-group" formGroupName="geo">
+                        <input type="number" placeholder="Latitude" formControlName="lat">
+                        <input type="number" placeholder="Longitude" formControlName="lng">
+                    </div>
+                </div>
+            </div>
+            <button type="button" (click)="onAddAddress()">Add Address</button>
+            <input type="text" placeholder="Phone" formControlName="phone">
+            <input type="text" placeholder="Website" formControlName="website">
+            <div class="form-group" formGroupName="company">
+                <input type="text" placeholder="Company Name" formControlName="name">
+                <input type="text" placeholder="Company catchphrase" formControlName="catchPhrase">
+                <input type="text" placeholder="Company BS" formControlName="bs">
+            </div>
+        </div>
+        <button type="button" (click)="onFormSubmit()">Submit</button>
+    </form>
+    <p>Form state: {{ userForm.valid }}</p>
+</div>

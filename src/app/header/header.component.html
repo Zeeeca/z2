@@ -1,0 +1,35 @@
+<div class="header">
+  <div class="main-logo">
+    <img src="assets/zlogo.png" alt="logo">
+  </div>
+
+    <div class="auth">
+      <a routerLink="registration">Log In</a>
+    </div>
+
+  <div class="navigation">
+    <div class="nav-items">
+      <div class="nav-item" appDropdown>
+        <span>Food</span>
+        <div class="dropdown-menux">
+          <div class="dropdown-menu-itemx">
+            <a routerLink="/category/pastas">Pastas</a>
+          </div>
+          <div class="dropdown-menu-itemx">
+            <a routerLink="/category/pizzas">Pizzas</a>
+          </div>
+          <div class="dropdown-menu-itemx">
+            <a routerLink="/category/sandwitches">Sandwitches</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a routerLink="blog">Blog</a>
+      </div>
+      <div class="nav-item">
+        <span>Other</span>
+      </div>
+    </div>
+  </div>
+  <app-shopping-cart></app-shopping-cart>
+</div>

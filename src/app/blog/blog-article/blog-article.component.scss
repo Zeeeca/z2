@@ -1,0 +1,18 @@
+.blog-wrapper {
+    height: 800px;
+    overflow: auto;
+
+    .blog-item {
+        width: 50%;
+        margin: auto;
+        margin-top: 10px;
+        
+        h3 {
+            text-transform: capitalize; 
+        }
+    
+        p::first-letter {
+            text-transform: capitalize;
+        }
+    }
+}
